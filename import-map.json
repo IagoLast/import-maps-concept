@@ -1,0 +1,5 @@
+{
+    "imports": {
+        "demo-library/": "/node_modules/demo_library/index.js"
+    }
+}
