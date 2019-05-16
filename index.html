@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Import map</title>
     <script>
-        fetch('import-map.json')
+        fetch('https://raw.githubusercontent.com/IagoLast/import-maps-concept/master/import-map.json')
             .then(res => res.json()).then(res => {
                 const im = document.createElement('script');
                 im.type = 'importmap';
