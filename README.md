@@ -72,14 +72,13 @@ GET https://import-map.io?p=react@latest,rxjs#1.0,some-lib@2.0.3
 
 Maybe a complete register?
 
-````
+```
 GET https://import-map.io
 
 
 {
-    ... big file (usually cached)
+ ...big file (usually cached)
 }
-
 ```
 
 
