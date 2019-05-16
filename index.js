@@ -1,3 +1,8 @@
-import demoFunction from '//demo-library';
+import Vue from 'Vue';
 
-document.body.innerHTML = demoFunction();
+const app = new Vue({
+    el: '#app',
+    data: {
+        message: 'Hello Vue!'
+    }
+})

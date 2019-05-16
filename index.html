@@ -6,13 +6,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Import map</title>
-    <script src="import-map-installer.js"></script>
-    <script type="module" src="./index.js"></script>
+    <script>
+        fetch('import-map.json')
+            .then(res => res.json()).then(res => {
+                const im = document.createElement('script');
+                im.type = 'importmap';
+                im.textContent = JSON.stringify(res);
+                document.head.appendChild(im);
+            })
+            .then(() => {
+                const script = document.createElement('script');
+                script.src = 'index.js';
+                script.type = 'module';
+                document.head.appendChild(script);
+            });
+
+    </script>
 </head>
 
 <body>
-    <h1>Works</h1>
-
+    <main id="app">
+        {{ message }}
+    </main>
 </body>
 
 </html>
